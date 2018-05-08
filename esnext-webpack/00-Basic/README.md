@@ -1,13 +1,23 @@
-### Project Configuration
+# Aurelia-Auth0 
+This application is Aurelia version of the 00-Basic application
 
-    Name: esnext-webpack
-    Platform: Web
-    Bundler: Webpack
-    Loader: None
-    Transpiler: Babel
-    Markup Processor: Minimal Minification
-    CSS Processor: None
-    Unit Test Runner: Jest
-    Unit Test Runner: Karma
-    Integration Test Runner: None
-    Editor: Visual Studio Code
+
+### Running The App
+
+```
+npm install
+```
+
+or 
+
+```
+yarn install
+```
+
+followed by 
+```
+nps
+```
+
+
+**Note**: the command **[`nps`](https://www.npmjs.com/package/nps)** is a better alternative to **`au run --watch`** when using webpack as the compiler / bundler.
