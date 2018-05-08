@@ -1,4 +1,5 @@
-# Aurelia-Auth0 
+# Aurelia 00-Basic
+
 This application is Aurelia version of the standard 00-Basic application - a skeleton without any Auth0 specific code.
 
 ![image](https://user-images.githubusercontent.com/2712405/39785055-ae0835b2-52e8-11e8-9860-017c5bf0e9c2.png)
