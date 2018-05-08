@@ -1,6 +1,7 @@
-# Aurelia-Auth0 
-This application is Aurelia version of the 00-Basic application
+# Aurelia 01-Login
+This application is Aurelia version of the standard 01-Login application demonstrating the basic steps of authentication with Auth0 SaaS.
 
+___This app is still under development___
 
 ### Running The App
 
