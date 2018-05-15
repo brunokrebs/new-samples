@@ -1,5 +1,5 @@
 export const AuthConfig = {
-  domain: 'aureliatools.auth0.com',
-  clientID: 'place your own cliendID here',
+  domain: 'place your own domain here',
+  clientID: 'place your own clientID here',
   callbackUri: 'http://localhost:8080'
 }
