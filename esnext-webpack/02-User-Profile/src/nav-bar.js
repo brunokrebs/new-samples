@@ -1,6 +1,6 @@
-import {inject} from 'aurelia-framework';
+import { inject } from 'aurelia-framework';
 import { bindable } from 'aurelia-framework';
-import { router } from 'aurelia-router';
+import { Router } from 'aurelia-router';
 import { EventAggregator } from 'aurelia-event-aggregator';
 
 @inject(EventAggregator, Router)

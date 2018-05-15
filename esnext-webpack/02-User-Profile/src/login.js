@@ -4,16 +4,17 @@ import { Auth0Service } from './auth0-service';
 @inject(Auth0Service)
 export class Login {
 
-  constructor(auth0Service) {
-    this.auth0Service = auth0Service;
+  constructor(Auth0Service) {
+    this.authService = Auth0Service;
+    let ignoreLocalStorage = true;
 
-    if (this.auth0Service.isAuthenticated()) {
+    if (this.authService.isAuthenticated(ignoreLocalStorage)) {
       // The user just logged out (remember the Login navbar item is a toggle)
       // so the cleanout actions are all here.
       //
-      this.auth0Service.logout();
+      this.authService.logout();
     } else {
-      this.auth0Service.login();
+      this.authService.login();
     }    
   }
 }
