@@ -1,5 +1,5 @@
 import environment from './environment';
-import PLATFORM from 'aurelia-pal';
+import {PLATFORM} from 'aurelia-pal';
 import 'babel-polyfill';
 import * as Bluebird from 'bluebird';
 
@@ -13,7 +13,8 @@ Bluebird.config({ warnings: { wForgottenReturn: false } });
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
-    .feature(PLATFORM.moduleName('resources/index'));
+    .feature(PLATFORM.moduleName('resources/index'))
+    .plugin('aurelia-event-aggregator');
 
   if (environment.debug) {
     aurelia.use.developmentLogging();
