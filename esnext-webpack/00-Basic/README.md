@@ -49,3 +49,7 @@ nps
 
 **Note**: the command **[`nps`](https://www.npmjs.com/package/nps)** is a better alternative to **`au run --watch`** when using webpack as the compiler / bundler.
 
+The only functional part of this application is the **`Login`** menu item, which, when clicked, results with
+
+![image](https://user-images.githubusercontent.com/2712405/40132782-b76f8b90-590b-11e8-8715-862fabd83f0e.png)
+
