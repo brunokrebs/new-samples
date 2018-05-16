@@ -1,0 +1,12 @@
+<template bindable="auth">
+  <section>
+    <div style="margin-left:100px; margin-top: 20px">
+      <h5 if.bind="auth.authenticated">
+        You are logged in!
+      </h5>
+      <h5 if.bind="!auth.authenticated">
+        You are not logged in! Please click on Login menu to continue
+      </h5>
+    </div>
+  </section>
+</template>
