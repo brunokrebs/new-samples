@@ -5,7 +5,6 @@ import { Auth0Service } from './auth0-service';
 @inject(Auth0Service)
 
 export class App {
-
   constructor(Auth0Service) {
     this.authservice = Auth0Service;
   }
@@ -13,12 +12,12 @@ export class App {
   configureRouter(config, router) {
     config.title = 'Auth0 - Aurelia ';
     config.map([{
-        route: ['', 'Home'],
-        name: 'home',
-        moduleId: PLATFORM.moduleName('./home'),
-        nav: true,
-        title: 'Home'
-      }
+      route: ['', 'Home'],
+      name: 'home',
+      moduleId: PLATFORM.moduleName('./home'),
+      nav: true,
+      title: 'Home'
+    }
     ]);
 
     this.router = router;

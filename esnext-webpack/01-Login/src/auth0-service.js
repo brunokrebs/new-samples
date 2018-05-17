@@ -5,9 +5,7 @@ import { EventAggregator } from 'aurelia-event-aggregator';
 
 @inject(EventAggregator)
 export class Auth0Service {
-
   constructor(eventAggregator) {
-  
     this.auth = new auth.WebAuth({
       domain: AUTH_CONFIG.domain,
       clientID: AUTH_CONFIG.clientID,
@@ -29,6 +27,13 @@ export class Auth0Service {
     this.authenticated = value;
   }
 
+  getAccessToken() {
+    return this.accessToken;
+  }
+
+  getIdToken() {
+    return this.idToken;
+  }
 
   login() {
     this.auth.authorize();
@@ -38,18 +43,19 @@ export class Auth0Service {
     this.isAuthenticated = false;
   }
 
-
   handleAuthentication() {
-    this.auth.parseHash((err, authResult) => {
-      if (authResult && authResult.accessToken && authResult.idToken) {
-        this.isAuthenticated = true;
-      } else if (err) {
-        console.log(err);
-        alert(`Error: ${err.error}. Check the console for further details.`);
-      }
-    });
-    // remove hash so we dont get router failure
     if (window.location.hash.indexOf('#access_token=') === 0) {
+      this.auth.parseHash((err, authResult) => {
+        if (authResult && authResult.accessToken && authResult.idToken) {
+          this.isAuthenticated = true;
+          this.accessToken = authResult.accessToken;
+          this.idToken = authResult.idToken;
+        } else if (err) {
+          console.log(err);
+          alert(`Error: ${err.error}. Check the console for further details.`);
+        }
+      });
+      // remove hash so we dont get router failure
       window.location.hash = '';
     }
   }
